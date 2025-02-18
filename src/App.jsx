@@ -88,7 +88,7 @@ const App = () => {
  
 
   return (
-    <div className='bg-slate-100 p-10'>
+    <div className='bg-slate-100 p-10 h-[100vh]'>
       <h1 className='text-center text-2xl font-bold'>SEARCH FILTER SHORT</h1>
       <div className='h-36 flex justify-center'>
         <div>
