@@ -72,32 +72,20 @@ const App = () => {
 
 
 
-  // useEffect(() => {
-
-  // const tempShortedJobs = filterJobs.sort((a, b) => {
-
-  //   if(sortOrder === "asc"){
-  //     return a.job_title.localeCompare(b.job_title);
-  //   }else{
-  //     return b.job_title.localeCompare(a.job_title);
-  //   }
-  // });
-   
-  // setFilterJobs([...tempShortedJobs]);
-  // }, [sortOrder, filterJobs])
-
-
   useEffect(() => {
-    setFilterJobs((prevJobs) => {
-      const sortedJobs = [...prevJobs].sort((a, b) => {
-        return sortOrder === "asc"
-          ? a.job_title.localeCompare(b.job_title)
-          : b.job_title.localeCompare(a.job_title);
-      });
-      return sortedJobs;
-    });
-  }, [sortOrder]);
-  
+
+  const tempShortedJobs = filterJobs.sort((a, b) => {
+
+    if(sortOrder === "asc"){
+      return a.job_title.localeCompare(b.job_title);
+    }else{
+      return b.job_title.localeCompare(a.job_title);
+    }
+  });
+   
+  setFilterJobs([...tempShortedJobs]);
+  }, [sortOrder])
+ 
 
   return (
     <div className='bg-slate-100 p-10'>
